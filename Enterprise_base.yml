@@ -1,4 +1,7 @@
 ---
+- name BCM Enterprise Linux Init
+ hosts: host.name.ip
+
 tasks:
 - name: Execute the BCM Linux Enterprise init script
   shell: init.sh >> init_output.txt
