@@ -1,0 +1,7 @@
+---
+tasks:
+- name: Execute the BCM Linux Enterprise init script
+  shell: init.sh >> init_output.txt
+  args:
+    chdir: /usr/local/bin/
+    creates: init_output.txt
