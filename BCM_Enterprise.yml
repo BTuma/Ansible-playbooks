@@ -1,7 +1,6 @@
 ---
 - hosts: all
   vars:
-    svr_hostname
   remote_user: svc_ansiorch
   sudo: yes
   tasks:
