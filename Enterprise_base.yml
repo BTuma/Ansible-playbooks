@@ -1,12 +1,16 @@
 ---
-- name: BCM Enterprise Linux Init
-  hosts: all
+- hosts: all
+  vars:
+    svr_hostname
   remote_user: svc_ansiorch
   sudo: yes
-
   tasks:
     - name: Execute the BCM Linux Enterprise init script
       shell: init.sh >> init_output.txt
       args:
       chdir: /usr/local/bin/
       creates: init_output.txt
+    - name: mark ansible was here
+      command: touch /tmp/ansible_was_here
+
+	

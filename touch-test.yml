@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    svr_hostname
+  remote_user: svc_ansiorch
+  sudo: yes
+  tasks:
+    - name: mark ansible was here
+      command: touch /tmp/ansible_was_here
