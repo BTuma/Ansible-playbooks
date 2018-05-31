@@ -1,15 +1,7 @@
----
-- hosts: all
-  remote_user: svc_ansiorch
-  sudo: yes
-  tasks:
-    - name: mark ansible was here
-      command: touch /tmp/ansible_was_here
-
-
-
-
-
+# host should be a member of domain ansible.vagrant; module will ensure the hostname is mydomainclient
+# and will use the passed credentials to join domain if necessary.
+# Ansible connection should use local credentials if possible.
+# If a reboot is required, the second task will trigger one and wait until the host is available.
 - hosts: winclient
   gather_facts: no
   tasks:

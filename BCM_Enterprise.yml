@@ -2,14 +2,30 @@
 - hosts: all
   vars:
   remote_user: svc_ansiorch
-  sudo: yes
+  become: true
   tasks:
     - name: Execute the BCM Linux Enterprise init script
       shell: init.sh >> init_output.txt
-      args:
       chdir: /usr/local/bin/
       creates: init_output.txt
     - name: mark ansible was here
       command: touch /tmp/ansible_was_here
 
 	
+
+
+RH3VUREngine
+NC550SFP Dual Port Flex 10 Adapter
+
+
+Breast Center
+
+Morgan 
+7) 798-2181
+BCLN-11-0091
+
+Brent - Imaging
+7) 798-6435
+
+
+Sanders Dickey
