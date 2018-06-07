@@ -1,0 +1,9 @@
+---
+- hosts: 
+  vars: 
+    ip_address: vm.ipaddresses[0]
+    remote_user: root
+    tasks:
+    - name: Touch File
+      command: touch /tmp/ansible_was_here
+      when: ansible_os_family == "Redhat"
