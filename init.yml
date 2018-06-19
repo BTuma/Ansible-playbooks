@@ -1,5 +1,5 @@
 ---
-- hosts: ip_address
+- hosts: ip_addresses
   vars:
     ip_address: vm.ipaddresses[0]
   remote_user: root
