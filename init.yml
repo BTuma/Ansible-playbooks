@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ target }}"
+- hosts: "{{ target_host }}.ad.bcm.edu"
 #  vars:
 #    target: target_host
   remote_user: root
