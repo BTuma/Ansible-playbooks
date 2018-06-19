@@ -1,7 +1,7 @@
 ---
-- hosts: ip_addresses
+- hosts: target_host
   vars:
-    ip_address: vm.ipaddresses[0]
+    target_host: localhost
   remote_user: root
   tasks:
     - name: Touch File
