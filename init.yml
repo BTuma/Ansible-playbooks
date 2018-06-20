@@ -11,5 +11,5 @@
       command: touch /tmp/ansible_was_here
       when: ansible_os_family == "RedHat"
     - debug:
-      msg: "Var 1: {{ var1 }}, Var 2: {{ var2 }}, Var 3: {{ var3 }}, HostVar: {{ hostvar }}"
+      msg: "Var 1- {{ var1 }} Var 2- {{ var2 }} Var 3- {{ var3 }} HostVar- {{ hostvar }}"
 
