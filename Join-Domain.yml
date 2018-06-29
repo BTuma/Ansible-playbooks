@@ -1,0 +1,18 @@
+## Ben Tuma
+## Creation Date: 6/1/2018
+## Description: Playbook for basic domain join
+
+- hosts: winclient
+  gather_facts: no
+  tasks:
+  - win_domain_membership:
+      dns_domain_name: something
+      vm_name: mydomainclient
+      domain_admin_user: whatever
+      domain_admin_password: nopass
+      domain_ou_path: "SomePath"
+      state: domain
+    register: domain_state
+
+  - win_reboot:
+    when: domain_state.reboot_required
