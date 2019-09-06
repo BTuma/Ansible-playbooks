@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  remote_user: root
+  remote_user: ben
   tasks:
     - name: mark ansible was here
       command: touch /tmp/ansible_was_here
